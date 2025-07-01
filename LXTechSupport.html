@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Support</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 44px;
+            background-color: #ffffff;
+            display: grid;
+            grid-template-columns: 50px 1fr 50px;
+            align-items: center;
+            padding: 0 8px;
+            z-index: 1000;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .nav-title {
+            color: #333333;
+            font-size: 17px;
+            font-weight: 600;
+            text-align: center;
+            grid-column: 2;
+        }
+        
+        .close-button {
+            background: none;
+            border: none;
+            color: #007AFF;
+            font-size: 28px;
+            cursor: pointer;
+            grid-column: 1;
+            justify-self: start;
+            margin-left: -10pt;
+        }
+        
+        .content {
+            margin-top: 64px;
+        }
+        
+        h1 {
+            color: #333333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #333333;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            color: #333333;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        h4 {
+            color: #333333;
+            font-size: 14px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #333333;
+        }
+        
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+            color: #333333;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+        
+        a {
+            color: #007AFF;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <button class="close-button" onclick="closeWindow()">&times;</button>
+        <div class="nav-title">Technical Support</div>
+    </div>
+    
+    <div class="content">
+        <h1>Technical Support</h1>
+        
+        <p>Welcome to SpaceNest! If you encounter any issues while using the app, please refer to the information below or contact us.</p>
+
+        <h2>Contact Us</h2>
+        <p><strong>Technical Support Email:</strong> <a href="mailto:spacenest_service@outlook.com">spacenest_service@outlook.com</a></p>
+        <p>We will reply to your email within 24 hours.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        
+        <h3>Q: How to get started?</h3>
+        <p>After launching the app, click the "Scan" button and the system will automatically analyze your photos and videos.</p>
+
+        <h3>Q: What files can be cleaned?</h3>
+        <p>You can clean duplicate photos, similar photos, large photos, large videos, blurry photos, screenshots, live photos, screen recordings, etc.</p>
+
+        <h3>Q: Does it have video compression feature?</h3>
+        <p>Yes, you can compress video files to save storage space.</p>
+
+        <h3>Q: Is it safe to delete photos?</h3>
+        <p>You can preview all photos and videos to be deleted before deletion.</p>
+
+        <h2>Feature Guide</h2>
+        
+        <h3>🔍 Duplicate Photo Detection</h3>
+        <p>Intelligently identify identical photos to help clean duplicate content.</p>
+        
+        <h3>👥 Similar Photo Detection</h3>
+        <p>Find similar photos for easy selection of the best ones to keep.</p>
+        
+        <h3>🎬 Video Compression</h3>
+        <p>Compress large video files to save storage space.</p>
+        
+        <h3>📱 Smart Classification</h3>
+        <p>Automatically classify screenshots, live photos, blurry photos, etc.</p>
+
+        <h2>Troubleshooting</h2>
+        
+        <h3>Scan Failed</h3>
+        <ol>
+            <li>Check photo access permissions</li>
+            <li>Close other apps</li>
+            <li>Rescan</li>
+        </ol>
+
+        <h3>Video Compression Failed</h3>
+        <ol>
+            <li>Check if storage space is sufficient</li>
+            <li>Confirm video format is supported</li>
+            <li>Try compressing again</li>
+        </ol>
+
+        <h3>Important Note</h3>
+        <p><strong>⚠️ Please make sure to backup your important data before performing any reset or uninstall operations. We are not responsible for data loss caused by improper operations.</strong></p>
+
+        <h2>System Requirements</h2>
+        
+        <ul>
+            <li>iOS 15.0 or later</li>
+            <li>At least 2GB available storage space</li>
+        </ul>
+
+        <h2>Privacy & Security</h2>
+        
+        <ul>
+            <li>All photo and video analysis is performed locally</li>
+            <li>No photos or videos are uploaded to servers</li>
+            <li>You can preview all content to be deleted before deletion</li>
+        </ul>
+
+        <h2>Feedback & Suggestions</h2>
+        
+        <p><strong>📧 Feedback Email:</strong> <a href="mailto:spacenest_service@outlook.com">spacenest_service@outlook.com</a></p>
+        <p><strong>📱 App Store:</strong> Rate us and leave a review</p>
+
+        <p>Thank you for using SpaceNest! Keep your photos and videos organized and tidy.</p>
+    </div>
+
+    <script>
+        function closeWindow() {
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeWindow) {
+                window.webkit.messageHandlers.closeWindow.postMessage('close');
+            } else {
+                window.close();
+            }
+        }
+    </script>
+</body>
+</html> 
